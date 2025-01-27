@@ -1,0 +1,278 @@
+openapi: "3.1.0"
+info:
+  title: "video_streaming_rest_api API"
+  description: "video_streaming_rest_api API"
+  version: "1.0.0"
+servers:
+  - url: "https://video_streaming_rest_api"
+paths:
+  /api/videos:
+    post:
+      summary: "POST api/videos"
+      operationId: "createVideo"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VideoModel"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "object"
+  /api/videos/metadata/{id}:
+    post:
+      summary: "POST api/videos/metadata/{id}"
+      operationId: "createMetaData"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MetaDataModel"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/MetaData"
+  /api/videos/{id}:
+    put:
+      summary: "PUT api/videos/{id}"
+      operationId: "updateVideo"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VideoModel"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "object"
+    get:
+      summary: "GET api/videos/{id}"
+      operationId: "getVideoById"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/Video"
+    delete:
+      summary: "DELETE api/videos/{id}"
+      operationId: "delistVideo"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "object"
+  /api/videos/getall/{published}:
+    get:
+      summary: "GET api/videos/getall/{published}"
+      operationId: "getAllVideos"
+      parameters:
+        - name: "published"
+          in: "path"
+          required: true
+          schema:
+            type: "boolean"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "object"
+  /api/videos/search/{director}:
+    get:
+      summary: "GET api/videos/search/{director}"
+      operationId: "getAllVideosByDirector"
+      parameters:
+        - name: "director"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "object"
+  /api/videos/stats/{id}:
+    get:
+      summary: "GET api/videos/stats/{id}"
+      operationId: "getVideoStatsById"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "array"
+                items:
+                  $ref: "#/components/schemas/Stats"
+  /api/videos/play/{id}:
+    get:
+      summary: "GET api/videos/play/{id}"
+      operationId: "playVideoById"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/Video"
+  /api/videos/publish/{id}:
+    post:
+      summary: "POST api/videos/publish/{id}"
+      operationId: "publishVideo"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "object"
+components:
+  schemas:
+    VideoModel:
+      type: "object"
+      properties:
+        content:
+          type: "string"
+    MetaDataModel:
+      type: "object"
+      properties:
+        title:
+          type: "string"
+        synopsis:
+          type: "string"
+        cast:
+          type: "string"
+        director:
+          type: "string"
+        mainActor:
+          type: "string"
+        releaseYear:
+          type: "integer"
+          format: "int32"
+        genre:
+          type: "string"
+        duration:
+          type: "integer"
+          format: "int32"
+    MetaData:
+      type: "object"
+      properties:
+        video_id:
+          type: "integer"
+          format: "int64"
+        title:
+          type: "string"
+        synopsis:
+          type: "string"
+        cast:
+          type: "string"
+        director:
+          type: "string"
+        mainActor:
+          type: "string"
+        releaseYear:
+          type: "integer"
+          format: "int32"
+        genre:
+          type: "string"
+        duration:
+          type: "integer"
+          format: "int32"
+        published:
+          type: "boolean"
+    Video:
+      type: "object"
+      properties:
+        id:
+          type: "integer"
+          format: "int64"
+        published:
+          type: "boolean"
+        content:
+          type: "string"
+        metaData:
+          $ref: "#/components/schemas/MetaData"
+    Stats:
+      type: "object"
+      properties:
+        id:
+          type: "integer"
+          format: "int64"
+        userId:
+          type: "integer"
+          format: "int64"
+        impressions:
+          type: "integer"
+          format: "int64"
+        views:
+          type: "integer"
+          format: "int64"

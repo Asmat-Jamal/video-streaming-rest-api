@@ -1,0 +1,998 @@
+{
+	"info": {
+		"_postman_id": "3a7d5570-afd9-4a93-ad21-70492ee566dd",
+		"name": "Video API",
+		"description": "REST API for managing videos.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21905472"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "videos",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Load Video by ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/2",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"2"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Load by ID",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 27 Jan 2025 16:08:47 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": 1,\n    \"published\": true,\n    \"content\": \"test content\",\n    \"metaData\": {\n        \"video_id\": 1,\n        \"title\": \"Movie 1\",\n        \"synopsis\": \"test\",\n        \"cast\": \"test\",\n        \"director\": \"test\",\n        \"mainActor\": \"test\",\n        \"releaseYear\": 2009,\n        \"genre\": \"test\",\n        \"duration\": 300,\n        \"published\": true,\n        \"id\": 1\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Play Video by ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/play/2",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"play",
+												"2"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Play Video by ID",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/play/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														"play",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 27 Jan 2025 16:09:09 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": 1,\n    \"published\": true,\n    \"content\": \"test content\",\n    \"metaData\": {\n        \"video_id\": 1,\n        \"title\": \"Movie 1\",\n        \"synopsis\": \"test\",\n        \"cast\": \"test\",\n        \"director\": \"test\",\n        \"mainActor\": \"test\",\n        \"releaseYear\": 2009,\n        \"genre\": \"test\",\n        \"duration\": 300,\n        \"published\": true,\n        \"id\": 1\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Get Video Stats by ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/stats/5",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"stats",
+												"5"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Get Video Stats",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/stats/5",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														"stats",
+														"5"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 26 Jan 2025 13:10:31 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"id\": 4,\n        \"userId\": 1,\n        \"impressions\": 7,\n        \"views\": 3\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "Update Video by ID",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"content\": \"test\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/8",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"8"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Update Video by ID",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"content\": \"test\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 27 Jan 2025 19:11:59 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": 1,\n    \"published\": true,\n    \"content\": \"test\",\n    \"metaData\": null\n}"
+										}
+									]
+								},
+								{
+									"name": "Update Video Meta Data by ID",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n     \"title\": \"Movie 1\",\n    \"synopsis\": \"test\",\n    \"cast\": \"test\",\n    \"director\": \"test\",\n    \"releaseYear\": 2009,\n    \"genre\": \"test\",\n    \"duration\": 300,\n     \"mainActor\": \"test\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/metadata/5",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"metadata",
+												"5"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Update Video MetaData by ID",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n     \"title\": \"Movie 1\",\n    \"synopsis\": \"test\",\n    \"cast\": \"test\",\n    \"director\": \"test\",\n    \"releaseYear\": 2009,\n    \"genre\": \"test\",\n    \"duration\": 300,\n     \"mainActor\": \"test\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/metadata/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														"metadata",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 27 Jan 2025 16:06:40 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"video_id\": 1,\n    \"title\": \"Movie 1\",\n    \"synopsis\": \"test\",\n    \"cast\": \"test\",\n    \"director\": \"test\",\n    \"mainActor\": \"test\",\n    \"releaseYear\": 2009,\n    \"genre\": \"test\",\n    \"duration\": 300,\n    \"published\": false,\n    \"id\": 1\n}"
+										}
+									]
+								},
+								{
+									"name": "Delist Video by ID",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/8",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"8"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Meta Data Not Found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/8",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														"8"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain;charset=UTF-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "19"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 25 Jan 2025 13:29:55 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "meta data not found"
+										},
+										{
+											"name": "Delist Video by ID",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 27 Jan 2025 19:17:18 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": 1,\n    \"published\": false,\n    \"content\": \"test\",\n    \"metaData\": {\n        \"video_id\": 1,\n        \"title\": \"Movie 1\",\n        \"synopsis\": \"test\",\n        \"cast\": \"test\",\n        \"director\": \"test\",\n        \"mainActor\": \"test\",\n        \"releaseYear\": 2009,\n        \"genre\": \"test\",\n        \"duration\": 300,\n        \"published\": false,\n        \"id\": 1\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Publish Video by ID",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/publish/6",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"publish",
+												"6"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Publish Video by ID",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/publish/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														"publish",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 27 Jan 2025 16:08:33 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": 1,\n    \"published\": true,\n    \"content\": \"test content\",\n    \"metaData\": {\n        \"video_id\": 1,\n        \"title\": \"Movie 1\",\n        \"synopsis\": \"test\",\n        \"cast\": \"test\",\n        \"director\": \"test\",\n        \"mainActor\": \"test\",\n        \"releaseYear\": 2009,\n        \"genre\": \"test\",\n        \"duration\": 300,\n        \"published\": true,\n        \"id\": 1\n    }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get All Videos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/videos/getall/true?page=0&size=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"videos",
+										"getall",
+										"true"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Videos",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/getall/true?page=0&size=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"getall",
+												"true"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 27 Jan 2025 19:18:01 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": \"1\",\n            \"duration\": \"300\",\n            \"title\": \"Movie 1\",\n            \"director\": \"test\",\n            \"mainActor\": \"test\",\n            \"genre\": \"test\"\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 1,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"totalElements\": 1,\n    \"totalPages\": 1,\n    \"last\": true,\n    \"size\": 1,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 1,\n    \"first\": true,\n    \"empty\": false\n}"
+								},
+								{
+									"name": "Get All Videos Empty",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/getall/false?page=0&size=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"getall",
+												"false"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 27 Jan 2025 19:18:39 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 1,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"totalElements\": 0,\n    \"totalPages\": 0,\n    \"last\": true,\n    \"size\": 1,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 0,\n    \"first\": true,\n    \"empty\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All Videos By Director",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/videos/search/jamal?page=0&size=3",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"videos",
+										"search",
+										"jamal"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Videos By Director",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/search/test?page=0&size=3",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												"search",
+												"test"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 27 Jan 2025 19:19:25 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"content\": [\n        {\n            \"id\": \"1\",\n            \"duration\": \"300\",\n            \"title\": \"Movie 1\",\n            \"director\": \"test\",\n            \"mainActor\": \"test\",\n            \"genre\": \"test\"\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 3,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"totalElements\": 1,\n    \"totalPages\": 1,\n    \"last\": true,\n    \"size\": 3,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 1,\n    \"first\": true,\n    \"empty\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Create a new Video",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"content\": \"test content\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/videos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"videos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create a new Video",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"content\": \"test content\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 27 Jan 2025 19:19:42 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 6,\n    \"published\": false,\n    \"content\": \"test content\",\n    \"metaData\": null\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
