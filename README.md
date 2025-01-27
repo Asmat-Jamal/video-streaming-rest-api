@@ -72,7 +72,7 @@ It also includes a **Postman collection** to help you quickly test the endpoints
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/.git
+   git clone https://github.com/Asmat-Jamal/video-streaming-rest-api.git
    cd video-streaming-rest-api
    ```
 2. Run MySQL in Docker (Optional) If you don’t have MySQL installed locally, spin up a container:
